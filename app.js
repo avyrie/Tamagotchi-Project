@@ -21,7 +21,7 @@ let name;
 let tamagotchi = new DigitalPet(name, randomHunger, randomSleepiness, randomBoredom, 0)
 
 //Creates field and button. Whatever input is made to the field will be assigned as the tamagotchi's name upon clicking the "name your new friend" button
-const chooseNameButton = document.querySelector('button');
+const chooseNameButton = document.getElementById('name-your-friend');
 
 function handleChooseName() {
 
@@ -75,9 +75,38 @@ function assignBoredom () {
 
 //-----------------------------------------------------------------
 
-//Puts tamagotchi stats into an array for easy access
+//interactive buttons
 
-// console.log(factors);
+//If you click the "Feed!" button, the hunger level is decreased by 1
+const feedButton = document.getElementById('feed');
+function handleFeedPet () {
+    tamagotchi.hunger = tamagotchi.hunger - 1;
+    console.log(`${tamagotchi.name}'s hunger level is ${tamagotchi.hunger}`);
+    hungerCount.textContent = tamagotchi.hunger
+}
+
+feedButton.addEventListener('click', handleFeedPet);
+
+//If you click the "Time For Bed" button, the sleepiness level is decreased by 1
+const sleepyButton = document.getElementById('sleep');
+function handleSleepyPet () {
+    tamagotchi.sleepiness = tamagotchi.sleepiness - 1;
+    console.log(`${tamagotchi.name}'s sleepiness level is ${tamagotchi.sleepiness}`);
+    sleepyCount.textContent = tamagotchi.sleepiness;
+}
+
+sleepyButton.addEventListener('click', handleSleepyPet);
+
+//If you click the "Play!" button, the boredom level is decreased by 1
+const boredomButton = document.getElementById('play');
+function handleBoredPet () {
+    tamagotchi.boredom = tamagotchi.boredom - 1;
+    console.log(`${tamagotchi.name}'s boredom level is ${tamagotchi.boredom}`);
+    boredomCount.textContent = tamagotchi.boredom;
+}
+
+boredomButton.addEventListener('click', handleBoredPet);
+//--------------------------------------------------------------------
 
 //Starts timer. Game lasts for 20 minutes (1200 seconds)
 let time = 0;
@@ -125,16 +154,17 @@ function startTimer() {
              //increases age every 12 seconds
              if (time % 12 === 0) {
                 tamagotchi.age++;
-                console.log(`Happy birthday, ${tamagotchi.name}! You're ${tamagotchi.age} years old!`)
+                console.log(`Happy birthday, ${tamagotchi.name}! You're ${tamagotchi.age} years old!`);
+                ageCount.textContent = tamagotchi.age;
+            }
+
+            //if one of the metrics goes above 10, pet will die
+            if (tamagotchi.hunger >= 10 || tamagotchi.boredom >= 10 || tamagotchi.sleepiness >= 10) {
+                console.log(`You have let down your precious friend. They have died from neglect.`)
+                clearInterval(timer);
             }
 
         }, 1000) // interval
     }
 
     //---------------------------------------------------------
-
-    
-    //if one of the metrics goes above 10, pet will die
-    if (tamagotchi.hunger >= 10 || tamagotchi.boredom >= 10 || tamagotchi.sleepiness >= 10) {
-        console.log(`You have let down your precious friend. They have died from neglect.`)
-    }
