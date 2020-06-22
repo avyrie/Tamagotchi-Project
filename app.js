@@ -24,12 +24,11 @@ let tamagotchi = new DigitalPet(name, randomHunger, randomSleepiness, randomBore
 const chooseNameButton = document.querySelector('button');
 
 function handleChooseName() {
-    console.log('you have chosen a name')
 
     const newName = document.querySelector('input').value;
     tamagotchi.name = newName;
     
-    console.log(`Your new friend's name is ${tamagotchi.name}`);
+    console.log(`Your new friend's name is ${tamagotchi.name} :) `);
     console.log(tamagotchi);
 }
 
@@ -43,11 +42,17 @@ chooseNameButton.addEventListener('click', clearForm);
 
 //---------------------------------------------------------------
 
-//When the name is assigned via button click, the starting hunger, sleepiness, and boredom values will be displayed along with your chosen name
+//When the name is assigned via button click, the starting age, hunger, sleepiness, and boredom values will be displayed along with your chosen name
 chooseNameButton.addEventListener('click', displayName)
 let nameAppear = document.getElementById('name-appear');
 function displayName () {
     nameAppear.textContent = tamagotchi.name;
+}
+
+chooseNameButton.addEventListener('click', assignAge)
+let ageCount = document.getElementById('age-count');
+function assignAge () {
+    ageCount.textContent = tamagotchi.age;
 }
 
 chooseNameButton.addEventListener('click', assignHunger)
