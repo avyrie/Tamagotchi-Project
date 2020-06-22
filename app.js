@@ -35,14 +35,21 @@ function handleChooseName() {
 
 chooseNameButton.addEventListener('click', handleChooseName);
 
-// function clearForm () {
-//     document.querySelector('input').reset();
-// }
-// chooseNameButton.addEventListener('click', clearForm);
+//Clears form after input
+function clearForm () {
+    document.getElementById('name-input').value = "";
+}
+chooseNameButton.addEventListener('click', clearForm);
 
 //---------------------------------------------------------------
 
-//When the name is assigned via button click, the starting hunger, sleepiness, and boredom values will be displayed
+//When the name is assigned via button click, the starting hunger, sleepiness, and boredom values will be displayed along with your chosen name
+chooseNameButton.addEventListener('click', displayName)
+let nameAppear = document.getElementById('name-appear');
+function displayName () {
+    nameAppear.textContent = tamagotchi.name;
+}
+
 chooseNameButton.addEventListener('click', assignHunger)
 let hungerCount = document.getElementById('hunger-count');
 function assignHunger () {
