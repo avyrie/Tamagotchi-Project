@@ -74,3 +74,18 @@ function assignBoredom () {
 }
 
 //-----------------------------------------------------------------
+
+//Starts timer. Game lasts for 30 minutes (1800 seconds)
+let time = 0;
+function startTimer() {
+
+            const timer = setInterval(function () {    
+            if (time < 1800) {
+                time++;
+                console.log(time);
+            } else {
+                console.log('It\'s always sad to say goodbye');
+                clearInterval(timer);
+            }
+        }, 1000) // interval
+    }
