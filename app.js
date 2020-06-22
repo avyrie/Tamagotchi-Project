@@ -92,36 +92,39 @@ function startTimer() {
                 clearInterval(timer);
             }
 
+            //Put tamagotchi factors into an array for easy random access
             let factors = [tamagotchi.hunger, tamagotchi.sleepiness, tamagotchi.boredom ];
             //every 5 seconds,a prompt will appear and a ranomly chosen factor will be increased by 1
             if (time % 5 === 0) {
 
-                let that = factors[Math.floor(Math.random() * 3)];
+                let randomFactor = factors[Math.floor(Math.random() * 3)];
 
-                if (that === tamagotchi.hunger) {
+                if (randomFactor === tamagotchi.hunger) {
 
                         tamagotchi.hunger = tamagotchi.hunger + 1;
                         console.log(`${tamagotchi.name}'s hunger level is ${tamagotchi.hunger}`);
                         hungerCount.textContent = tamagotchi.hunger;
+
+                } else if (randomFactor === tamagotchi.sleepiness) {
+
+                    tamagotchi.sleepiness = tamagotchi.sleepiness + 1;
+                        console.log(`${tamagotchi.name}'s sleepiness level is ${tamagotchi.sleepiness}`);
+                        sleepyCount.textContent = tamagotchi.sleepiness;
+
+                } else if (randomFactor === tamagotchi.boredom) {
+
+                    tamagotchi.boredom = tamagotchi.boredom + 1;
+                        console.log(`${tamagotchi.name}'s boredom level is ${tamagotchi.boredom}`);
+                        boredomCount.textContent = tamagotchi.boredom;
                 }
-
-                // } else if (that === tamagotchi.sleepiness) {
-                //     ///grab sleepy
-
-                // } else if (that === tamagotchi.boredom) {
-                //     //grab boredom
-                // }
-                // that++
-                // console.log(that);
-                
-                //come back to this. need to fins a way to reflect increased stat in html***
+                //---------------------------------------------------------
                 
                 window.alert(`${tamagotchi.name} needs some attention`);
             }   
 
-             //increases age every 60 seconds
-             if (time % 60 === 0) {
-                tamagotchi.age++
+             //increases age every 12 seconds
+             if (time % 12 === 0) {
+                tamagotchi.age++;
                 console.log(`Happy birthday, ${tamagotchi.name}! You're ${tamagotchi.age} years old!`)
             }
 
