@@ -108,6 +108,12 @@ function handleBoredPet () {
 boredomButton.addEventListener('click', handleBoredPet);
 //--------------------------------------------------------------------
 
+//Click button to start timer
+const startButton = document.getElementById('start');
+startButton.addEventListener('click', startTimer);
+
+//--------------------------------------------------------------
+
 //Starts timer. Game lasts for 20 minutes (1200 seconds)
 let time = 0;
 function startTimer() {
