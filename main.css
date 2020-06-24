@@ -67,9 +67,46 @@ button {
     margin: auto 10px;
 }
 
+/* @keyframes wobble {
+    from
+}
+
+@keyframes wobble {
+    0% {transform: rotate(5deg)};
+    50% {transform: rotate(10deg)}
+    100% {transform: rotate(-5deg)};
+} */
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
 #character {
     height: 150px;
     margin: 20px auto;
+    /* transform-origin: 50% 100%;
+    animation: wobble 1s infinite linear; */
+    /* animation: wobble;
+    animation-duration: 6s; */
+    animation-iteration-count: infinite;
+}
+
+#character:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
 }
 
 .nest {
@@ -108,7 +145,12 @@ button {
 
 .character-section {
     border-radius: 30px;
-    background: lightgray;
+    background-image: url("https://www.tynker.com/projects/images/e5fbc86a45895c4f3c516f3a914d1d24561a0a21/background-scene---image.png");
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    background-position: 100% 100%;
+    overflow: hidden;
+    /* background: lightgray; */
     width: 300px;
     margin: 0 auto;
 }
@@ -125,4 +167,8 @@ button {
     width: 500px;
     margin: 0 auto;
     border-radius: 30px
+}
+
+.other-characters {
+    display: none;
 }
