@@ -119,11 +119,11 @@ let time = 0;
 function startTimer() {
 
             const timer = setInterval(function () {    
-            if (time < 1200) {
+            if (time < 900) {
                 time++;
                 console.log(time);
             } else {
-                console.log('It\'s always sad to say goodbye');
+                console.log('It\'s always sad to say goodbye...');
                 clearInterval(timer);
             }
 
@@ -158,7 +158,7 @@ function startTimer() {
             }   
 
              //increases age every 12 seconds
-             if (time % 12 === 0) {
+             if (time % 60 === 0) {
                 tamagotchi.age++;
                 console.log(`Happy birthday, ${tamagotchi.name}! You're ${tamagotchi.age} years old!`);
                 ageCount.textContent = tamagotchi.age;
@@ -170,7 +170,29 @@ function startTimer() {
                 clearInterval(timer);
             }
 
+
+    // When the tamagotchi gets to 5, 10, and 15 minutes the lifestage and image will change
+    
+            //300 s
+            if (time == 14) {
+                startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/littler-cat.png";
+            }
+
+            if (time === 18) {
+                startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/panther.webp";
+            }
+
         }, 1000) // interval
     }
 
     //---------------------------------------------------------
+
+    // When game begins the character image changes tot he starting image
+
+    const startCharacter = document.getElementById('character');
+
+    function firstStage() {
+        startCharacter.src = "/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/black-blob-first.png";
+    }
+
+    startButton.addEventListener('click', firstStage);

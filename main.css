@@ -2,6 +2,8 @@ body {
     background: pink;
     font-family: 'Indie Flower', sans-serif;
     
+ 
+    
 }
 
 h1 {
@@ -20,18 +22,80 @@ h1 {
     text-decoration: underline;
 }
 
+#name-appear {
+    margin: 10px;
+    padding: 10px;
+}
+
+.name-position {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
 
 .metrics-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 10px;
-    padding: 10px;
-    width: 50%;
-   
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto 10px;
+    width: 50%
+}
+
+#age {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+#age-count {
+    margin: auto 10px;
 }
 
 button {
     font-family: 'Indie Flower', sans-serif;
     font-weight: bold;
+    margin: auto 10px;
+}
+
+#character {
+    height: 150px;
+}
+
+.nest {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.character-stages {
+    display: none;
+}
+
+.function-buttons {
+    display: inline-block;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin: auto 10px;
+}
+
+.begin-game {
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.character-design {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    /* display: flex;
+    justify-content: center; */
+    width: 50%;
 }

@@ -18,6 +18,7 @@
 
     <h1>My Tamagotchi</h1>
 
+    <!-- The "name your pet" function. Input box and button. -->
     <div class="name">
 
         <input id="name-input" type="text">
@@ -25,17 +26,41 @@
 
     </div>
 
-    <h2> <span id="name">Name:</span> <span id="name-appear"> </span> </h2>
+    <!-- Name section -->
 
-    <div class="metrics-container">
+    <div class="tama-device">
 
-        <h4 class="count" id="age">Age: <span id="age-count"> </span> </h4>
-        <h4 class="count" id="hunger">Hunger: <span id="hunger-count"> </span> </h4>
-        <h4 class="count" id="sleepy">Sleepiness: <span id="sleepy-count"> </span> </h4>
-        <h4 class="count" id="boredom">Boredom: <span id="boredom-count"> </span> </h4>
+    <h2 class="name-position"> <span id="name">Name:</span> <span id="name-appear"> </span> </h2>
+
+    <!-- Age -->
+    <h4 class="count" id="age">Age: <span id="age-count"> </span> </h4>
+
+    <div class="character-design">
+
+        <!-- Starting egg -->
+
+        <div class="nest"> 
+
+        <img id="character" src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/plain-egg.jpg"/>
+
+        </div>
 
     </div>
+    
 
+    <!-- Contains the metrics for hunger, sleepiness, and boredom -->
+
+    
+        <div class="metrics-container">
+
+            <h4 class="count" id="hunger">Hunger: <span id="hunger-count"> </span> </h4>
+            <h4 class="count" id="sleepy">Sleepiness: <span id="sleepy-count"> </span> </h4>
+            <h4 class="count" id="boredom">Boredom: <span id="boredom-count"> </span> </h4>
+
+        </div>
+    
+
+    <!-- The buttons for adjusting the metrics -->
     <div class="function-buttons">
 
         <button id="feed">Feed!</button>
@@ -44,12 +69,14 @@
 
     </div>
 
+</div>
+
+    <!-- Start game button -->
     <div class="begin-game">
 
         <button id="start">Begin Life With Your New Best Friend</button>
-        
-    </div>
 
+    </div>
     
 </body>
 
