@@ -112,6 +112,19 @@ boredomButton.addEventListener('click', handleBoredPet);
 const startButton = document.getElementById('start');
 startButton.addEventListener('click', startTimer);
 
+//Hides start button after click
+function hideStartButton () {
+    (startButton).style.visibility = "hidden";
+}
+startButton.addEventListener('click', hideStartButton)
+
+//Hides naming options after start game button is clicked
+const nameStrip = document.getElementById('name-strip');
+function hideName () {
+    (nameStrip).style.visibility = "hidden";
+}
+startButton.addEventListener('click', hideName);
+
 //--------------------------------------------------------------
 
 //Starts timer. Game lasts for 20 minutes (1200 seconds)

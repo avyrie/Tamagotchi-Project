@@ -1,9 +1,6 @@
 body {
     background: pink;
     font-family: 'Indie Flower', sans-serif;
-    
- 
-    
 }
 
 h1 {
@@ -31,16 +28,17 @@ h1 {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
+    height: 60px;
 }
 
 .metrics-container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-left: auto;
     margin-right: auto;
     padding: auto 10px;
-    width: 50%
+    width: 70%
 }
 
 #age {
@@ -50,7 +48,16 @@ h1 {
     margin-bottom: 30px;
 }
 
+#age-section{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    height: 40px;
+}
+
 #age-count {
+    display: flex;
+    justify-content: center;
     margin: auto 10px;
 }
 
@@ -62,6 +69,7 @@ button {
 
 #character {
     height: 150px;
+    margin: 20px auto;
 }
 
 .nest {
@@ -81,7 +89,7 @@ button {
     padding: 20px;
     display: flex;
     justify-content: center;
-    margin: auto 10px;
+    margin: 15px 10px 20px;
 }
 
 .begin-game {
@@ -95,7 +103,26 @@ button {
     display: block;
     position: relative;
     margin: 0 auto;
-    /* display: flex;
-    justify-content: center; */
     width: 50%;
+}
+
+.character-section {
+    border-radius: 30px;
+    background: lightgray;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.metrics-section {
+    border-radius: 30px;
+    background: #fffda7;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.tama-device {
+    background: #b2d8d8;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 30px
 }

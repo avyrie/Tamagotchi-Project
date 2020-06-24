@@ -19,57 +19,74 @@
     <h1>My Tamagotchi</h1>
 
     <!-- The "name your pet" function. Input box and button. -->
-    <div class="name">
+    <div class="name" id="name-strip">
 
         <input id="name-input" type="text">
         <button id="name-your-friend">Name Your New Friend!</button>
 
     </div>
 
-    <!-- Name section -->
+    
 
+    <!-- Outer ring -->
     <div class="tama-device">
 
-    <h2 class="name-position"> <span id="name">Name:</span> <span id="name-appear"> </span> </h2>
+        <!-- Name section -->
+        <h2 class="name-position"> <span id="name">Name:</span> <span id="name-appear"> </span> </h2>
 
-    <!-- Age -->
-    <h4 class="count" id="age">Age: <span id="age-count"> </span> </h4>
+        <!-- Middle ring -->
+        <div class="metrics-section">
 
-    <div class="character-design">
 
-        <!-- Starting egg -->
+            <!-- Age -->
+            <div id="age-section">
+            <h4 class="count" id="age">Age: <span id="age-count"> </span> </h4>
+            </div>
 
-        <div class="nest"> 
+            <!-- Inner ring -->
+            <div class="character-section"> 
 
-        <img id="character" src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/plain-egg.jpg"/>
+                <div class="character-design">
+
+                    <!-- Starting egg -->
+
+                    <div class="nest"> 
+
+                    <img id="character" src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/plain-egg.jpg"/>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- Inner ring end -->
+            
+
+            <!-- Contains the metrics for hunger, sleepiness, and boredom -->
+
+            
+                <div class="metrics-container">
+
+                    <h4 class="count" id="hunger">Hunger: <span id="hunger-count"> </span> </h4>
+                    <h4 class="count" id="sleepy">Sleepiness: <span id="sleepy-count"> </span> </h4>
+                    <h4 class="count" id="boredom">Boredom: <span id="boredom-count"> </span> </h4>
+
+                </div>
 
         </div>
+        <!-- Middle ring end -->
 
-    </div>
-    
+        <!-- The buttons for adjusting the metrics -->
+        <div class="function-buttons">
 
-    <!-- Contains the metrics for hunger, sleepiness, and boredom -->
-
-    
-        <div class="metrics-container">
-
-            <h4 class="count" id="hunger">Hunger: <span id="hunger-count"> </span> </h4>
-            <h4 class="count" id="sleepy">Sleepiness: <span id="sleepy-count"> </span> </h4>
-            <h4 class="count" id="boredom">Boredom: <span id="boredom-count"> </span> </h4>
+            <button id="feed">Feed!</button>
+            <button id="sleep">Time For Bed</button>
+            <button id="play">Play!</button>
 
         </div>
-    
-
-    <!-- The buttons for adjusting the metrics -->
-    <div class="function-buttons">
-
-        <button id="feed">Feed!</button>
-        <button id="sleep">Time For Bed</button>
-        <button id="play">Play!</button>
-
-    </div>
 
 </div>
+<!-- Outer ring end -->
 
     <!-- Start game button -->
     <div class="begin-game">
