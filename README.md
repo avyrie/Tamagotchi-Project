@@ -1,5 +1,6 @@
 # ally-tamagotchi
 Week 3 Project: Tamagotchi
+
 Tamagotchis are digital pets that require care to keep them alive.
 
 For my project, I have decided to set up the functionality per the following:

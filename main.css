@@ -107,7 +107,7 @@ button {
 -ms-animation: fadeIn ease 3s;
 }
 
-#character-two {
+.character-two {
     height: 150px;
     margin: 20px auto;
     animation: fadeIn ease 3s;
@@ -117,7 +117,7 @@ button {
 -ms-animation: fadeIn ease 3s;
 }
 
-#character-three {
+.character-three {
     height: 150px;
     margin: 20px auto;
     animation: fadeIn ease 3s;
@@ -208,3 +208,28 @@ button {
 .other-characters {
     display: none;
 }
+
+
+/* only works once */
+#bounce-house {
+    height: 150px;
+    margin: 20px auto;
+    animation: bounce 1s infinite alternate;
+    -webkit-animation: bounce 1s alternate;
+  }
+  @keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+  @-webkit-keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }

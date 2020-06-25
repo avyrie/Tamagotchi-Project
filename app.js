@@ -103,6 +103,7 @@ function handleBoredPet () {
     tamagotchi.boredom = tamagotchi.boredom - 1;
     console.log(`${tamagotchi.name}'s boredom level is ${tamagotchi.boredom}`);
     boredomCount.textContent = tamagotchi.boredom;
+    startCharacter.setAttribute(`id`, `bounce-house`);
 }
 
 boredomButton.addEventListener('click', handleBoredPet);
@@ -130,7 +131,8 @@ startButton.addEventListener('click', hideName);
 //Starts timer. Game lasts for 20 minutes (1200 seconds)
 let time = 0;
 function startTimer() {
-
+            let secondCharacter;
+            let thirdCharacter;
             const timer = setInterval(function () {    
             if (time < 900) {
                 time++;
@@ -140,7 +142,7 @@ function startTimer() {
                 startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/ghost-drawing-2.png";
                 clearInterval(timer);
             }
-
+            
             //Put tamagotchi factors into an array for easy random access
             let factors = [tamagotchi.hunger, tamagotchi.sleepiness, tamagotchi.boredom ];
             //every 5 seconds,a prompt will appear and a ranomly chosen factor will be increased by 1
@@ -191,8 +193,11 @@ function startTimer() {
             //300 s
             if (time == 14) {
                 function secondStage() {
-                startCharacter.setAttribute(`id`, `character-two`);
-                startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/littler-cat.png";
+                startCharacter.remove();
+                secondCharacter = document.createElement(`img`);
+                secondCharacter.setAttribute(`class`, `character-two`);
+                secondCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/littler-cat.png";
+                document.querySelector(`.nest`).appendChild(secondCharacter);
                 }
                 secondStage();
             }
@@ -200,8 +205,11 @@ function startTimer() {
             //600 s
             if (time === 18) {
                 function thirdStage() {
-                startCharacter.setAttribute(`id`, `character-three`);
-                startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/black cat evil looking.png";
+                secondCharacter.remove();
+                thirdCharacter = document.createElement(`img`);
+                thirdCharacter.setAttribute(`class`, `character-three`);
+                thirdCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/black cat evil looking.png";
+                document.querySelector(`.nest`).appendChild(thirdCharacter);
                 }
                 thirdStage();
             }
