@@ -179,7 +179,8 @@ function startTimer() {
 
             //if one of the metrics goes above 10, pet will die
             if (tamagotchi.hunger >= 10 || tamagotchi.boredom >= 10 || tamagotchi.sleepiness >= 10) {
-                console.log(`You have let down your precious friend. They have died from neglect.`)
+                startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/ghost-drawing-2.png";
+                alert(`You have let down your precious friend. They have died from neglect.`)
                 clearInterval(timer);
             }
 
