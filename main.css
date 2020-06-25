@@ -99,10 +99,41 @@ button {
     animation: wobble 1s infinite linear; */
     /* animation: wobble;
     animation-duration: 6s; */
+    /* animation-iteration-count: infinite; */
+    animation: fadeIn ease 3s;
+-webkit-animation: fadeIn ease 3s;
+-moz-animation: fadeIn ease 3s;
+-o-animation: fadeIn ease 3s;
+-ms-animation: fadeIn ease 3s;
+}
+
+#character-two {
+    height: 150px;
+    margin: 20px auto;
+    animation: fadeIn ease 3s;
+-webkit-animation: fadeIn ease 3s;
+-moz-animation: fadeIn ease 3s;
+-o-animation: fadeIn ease 3s;
+-ms-animation: fadeIn ease 3s;
+}
+
+#character-three {
+    height: 150px;
+    margin: 20px auto;
+    animation: fadeIn ease 3s;
+-webkit-animation: fadeIn ease 3s;
+-moz-animation: fadeIn ease 3s;
+-o-animation: fadeIn ease 3s;
+-ms-animation: fadeIn ease 3s;
+}
+
+#shaking-character {
+    height: 150px;
+    margin: 20px auto;
     animation-iteration-count: infinite;
 }
 
-#character:hover {
+#shaking-character:hover {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
@@ -153,6 +184,11 @@ button {
     /* background: lightgray; */
     width: 300px;
     margin: 0 auto;
+}
+
+#video {
+    display: none;
+    /* <iframe width="811" height="406" src="https://www.youtube.com/embed/kXF3VYYa5TI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */
 }
 
 .metrics-section {

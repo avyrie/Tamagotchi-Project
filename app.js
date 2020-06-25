@@ -136,7 +136,8 @@ function startTimer() {
                 time++;
                 console.log(time);
             } else {
-                console.log('It\'s always sad to say goodbye...');
+                alert('It\'s always sad to say goodbye...');
+                startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/ghost-drawing-2.png";
                 clearInterval(timer);
             }
 
@@ -170,8 +171,8 @@ function startTimer() {
                 window.alert(`${tamagotchi.name} needs some attention`);
             }   
 
-             //increases age every 12 seconds
-             if (time % 60 === 0) {
+             //increases age every 30 seconds
+             if (time % 30 === 0) {
                 tamagotchi.age++;
                 console.log(`Happy birthday, ${tamagotchi.name}! You're ${tamagotchi.age} years old!`);
                 ageCount.textContent = tamagotchi.age;
@@ -189,11 +190,20 @@ function startTimer() {
     
             //300 s
             if (time == 14) {
+                function secondStage() {
+                startCharacter.setAttribute(`id`, `character-two`);
                 startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/littler-cat.png";
+                }
+                secondStage();
             }
 
+            //600 s
             if (time === 18) {
-                startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/panther.webp";
+                function thirdStage() {
+                startCharacter.setAttribute(`id`, `character-three`);
+                startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/black cat evil looking.png";
+                }
+                thirdStage();
             }
 
         }, 1000) // interval
@@ -203,9 +213,10 @@ function startTimer() {
 
     // When game begins the character image changes tot he starting image
 
-    const startCharacter = document.getElementById('character');
+    const startCharacter = document.getElementById('shaking-character');
 
     function firstStage() {
+        startCharacter.setAttribute(`id`, `character`);
         startCharacter.src = "/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/black-blob-first.png";
     }
 
