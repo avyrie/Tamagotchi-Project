@@ -1,15 +1,15 @@
 # ally-tamagotchi
-Week 3 Project: Tamagotchi
+**Week 3 Project: Tamagotchi**
 
 Tamagotchis are digital pets that require care to keep them alive.
 
-Gameplay:
+**Gameplay:**
 
 On the first screen, enter your preferred name for your new virtual pet. Click the "Name Your New Friend" button to name your new pet! You will see a trio of random starting metrics for your new pet. 
 
 When you are ready, click the "Begin Life With Your New Best Friend" button to start caring for your new best friend! Make sure to care for your pet and keep the metrics of "Hunger", "Sleepiness", and "Boredom" below 10 to keep your pet happy and healthy!
 
-For my project, I have decided to set up the functionality per the following:
+**For my project, I have decided to set up the functionality per the following:**
 
 The initial screen shows the "Tamagotchi device" with an egg in the center. There is a text input space above the "Tamagotchi device" for you to enter the name of your digital pet and buttons on the bottom of the "Tamagotchi device" to decriment the values of the digital pet's "Hunger", "Sleepiness", and "Boredom" metrics.
 
@@ -25,7 +25,7 @@ If any metric reaches 10, an alert will appear reading, "You have let down your 
 
 If all metrics stay below 10 and the timer reaches 300 seconds, an alert will appear stating, "It's always hard to say goodbye..." and the digital pet's image will change to that of a ghost. The timer and game will end at this time.
 
-Animation:
+**Animation:**
 
 The egg shown at the beginning will shake when you hover the cursor over it.
 
@@ -33,17 +33,17 @@ The each "evolution" of the digital pet will fade in, replacing the image of the
 
 Clicking the "Play" button will cause the digital pet to bounce the first time it is clicked.
 
-Choice explaination:
+**Choice explaination:**
 
 Speaking on the aesthetic look of the tamagotchi, I wanted to go for a pastel color scheme; something warm and calm and inviting as this is upposed to be a cute game about caring for your pet.
 
-I chose the "life stages" images because they were 1. transparent images and 2. mostly fit together in terms of evolution. They posess similar color pallettes and grow in size and complexity with each evolution. Plus, I like cats :)
+I chose the "life stages" images because they were 1. transparent images and 2. mostly fit together in terms of evolution. They posess similar color pallettes and grow in size and complexity with each evolution. Plus, I like cats :) I wanted each image to be a transparent png because I wanted to add a cute background to make them look like they were actually inside of a virtual world.
 
 I chose to randomize the beginning metrics because I figured it was more challenging (and interesting) than beginning from zero. This gives the player more incentive to interact with the pet if the starting metrics are closer to the "end game" metric of 10.
 
 I also chose to randomize which metric was elevated every 8 seconds to keep the user "on their toes" and not knowing which metric would increase. A sample of this randomization may be seen below:
 
-<img src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/assets/Screen Shot 2020-06-25 at 10.54.19 PM copy.png"/>
+![](/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/assets/Screen Shot 2020-06-25 at 10.54.19 PM copy.png)
 
 &
 
