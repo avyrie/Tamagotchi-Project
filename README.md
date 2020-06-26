@@ -75,8 +75,7 @@ Although I am proud of the product I have completed, I would have liked to inclu
 
 1. A slow fade-out of the life-stages instead of just a fade in of the next life-stage.
 2. More animation, especially when it comes to the interactive metric buttons.
-3. Idle animation for the digital pet.
-4. A selection of items to feed to the digital pet that would decrease the hunger level by a value of 1-3 depending on what was being fed.
-5. A fully customized character instead of publicly available images that would change facial expressions or actions in response to interaction or metric level.
-6. Thin borders around each section of the "tamagotchi device" to give more screen separation.
-7. When the pet dies, to have the ghost-form of the pet animate up and out of sight in the screen followed by the background being replaced by a video.
+3. A selection of items to feed to the digital pet that would decrease the hunger level by a value of 1-3 depending on what was being fed.
+4. A fully customized character instead of publicly available images that would change facial expressions or actions in response to interaction or metric level.
+5. Thin borders around each section of the "tamagotchi device" to give more screen separation.
+6. When the pet dies, to have the ghost-form of the pet animate up and out of sight in the screen followed by the background being replaced by a video.

@@ -138,7 +138,7 @@ function startTimer() {
             let secondCharacter;
             let thirdCharacter;
             const timer = setInterval(function () {    
-            if (time < 25) {
+            if (time < 300) {
                 time++;
                 console.log(time);
             } else {
@@ -207,7 +207,7 @@ function startTimer() {
     // When the tamagotchi gets to  100 and 200 seconds, the lifestage and image will change
     
             //First evolution https://thumbs.gfycat.com/ValidLiveAmericangoldfinch-small.gif
-            if (time == 10) {
+            if (time == 100) {
                 function secondStage() {
                 startCharacter.remove();
                 secondCharacter = document.createElement(`img`);
@@ -219,7 +219,7 @@ function startTimer() {
             }
 
             //Second evolution https://www.petbarn.com.au/skin/frontend/enterprise/petbarn/images/dropdowns/dropdown_cat.gif
-            if (time === 20) {
+            if (time === 200) {
                 function thirdStage() {
                 secondCharacter.remove();
                 thirdCharacter = document.createElement(`img`);
