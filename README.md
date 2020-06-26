@@ -43,7 +43,7 @@ I chose to randomize the beginning metrics because I figured it was more challen
 
 I also chose to randomize which metric was elevated every 8 seconds to keep the user "on their toes" and not knowing which metric would increase. A sample of this randomization may be seen below:
 
-![](/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/assets/Screen Shot 2020-06-25 at 10.54.19 PM copy.png)
+![Code Example](/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/assets/Screen Shot 2020-06-25 at 10.54.19 PM copy.png)
 
 &
 
