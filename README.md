@@ -90,6 +90,7 @@ Although I am proud of the product I have completed, I would have liked to inclu
 4. A fully customized character instead of publicly available images that would change facial expressions or actions in response to interaction or metric level.
 5. Thin borders around each section of the "tamagotchi device" to give more screen separation.
 6. When the pet dies, to have the ghost-form of the pet animate up and out of sight in the screen followed by the background being replaced by a video.
+7. The user has a choice between 1 of 3 different-colored eggs to start with which will yield different characters and life stages.
 
 **Wire Frame**
 <img src="./assets/20200626_094836.jpg"/>
