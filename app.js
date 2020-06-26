@@ -131,7 +131,7 @@ startButton.addEventListener('click', hideName);
 
 //--------------------------------------------------------------
 
-//Starts timer. Game lasts for 20 minutes (1200 seconds)
+//Starts timer. Game lasts for 5 minutes (300 seconds)
 let time = 0;
 let endVideo;
 function startTimer() {
@@ -152,7 +152,7 @@ function startTimer() {
             
             //Put tamagotchi factors into an array for easy random access
             let factors = [tamagotchi.hunger, tamagotchi.sleepiness, tamagotchi.boredom ];
-            //every 5 seconds,a prompt will appear and a ranomly chosen factor will be increased by 1
+            //every 8 seconds,a prompt will appear and a randomly chosen factor will be increased by 1
             if (time % 8 === 0) {
 
                 let randomFactor = factors[Math.floor(Math.random() * 3)];
@@ -180,7 +180,7 @@ function startTimer() {
                 window.alert(`${tamagotchi.name} needs some attention`);
             }   
 
-             //increases age every 30 seconds
+             //increases age every 20 seconds
              if (time % 20 === 0) {
                 tamagotchi.age++;
                 alert(`Happy birthday, ${tamagotchi.name}! You're ${tamagotchi.age} years old!`);
@@ -200,7 +200,7 @@ function startTimer() {
             }
 
 
-    // When the tamagotchi gets to 5, 10, and 15 minutes the lifestage and image will change
+    // When the tamagotchi gets to  100 and 200 seconds, the lifestage and image will change
     
             //First evolution
             if (time == 100) {
