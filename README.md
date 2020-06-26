@@ -21,6 +21,8 @@ Every 8 seconds, an alert will appear that the digital pet needs some attention 
 
 Every 20 seconds, the age of the digital pet will increase by 1 and an alert with the message of "Happy Birthday, (tamagotchi's name)! You're (age) years old!" will appear.
 
+Every 100 seconds, the digital pet will morph to the next life-stage.
+
 If any metric reaches 10, an alert will appear reading, "You have let down your precious friend. They have died from neglect." and the digital pet's image will change to that of a ghost. The timer and game will end at this time.
 
 If all metrics stay below 10 and the timer reaches 300 seconds, an alert will appear stating, "It's always hard to say goodbye..." and the digital pet's image will change to that of a ghost. The timer and game will end at this time.
@@ -31,17 +33,19 @@ The egg shown at the beginning will shake when you hover the cursor over it.
 
 The each "evolution" of the digital pet will fade in, replacing the image of the previous. 
 
+All images except the initial egg are publicly available gifs, I did not animate these images.
+
 Clicking the "Play" button will cause the digital pet to bounce the first time it is clicked.
 
 **Choice explaination:**
 
 Speaking on the aesthetic look of the tamagotchi, I wanted to go for a pastel color scheme; something warm and calm and inviting as this is upposed to be a cute game about caring for your pet.
 
-I chose the "life stages" images because they were 1. transparent images and 2. mostly fit together in terms of evolution. They posess similar color pallettes and grow in size and complexity with each evolution. Plus, I like cats :) I wanted each image to be a transparent png because I wanted to add a cute background to make them look like they were actually inside of a virtual world.
+I chose the "life stages" images because they were 1. transparent images. 2. mostly fit together in terms of evolution. and 3. Pre-animated gifs. They posess similar color pallettes and grow in size and complexity with each evolution. Plus, I like cats :) I wanted each image to be a transparent png because I wanted to add a cute background to make them look like they were actually inside of a virtual world.
 
 I chose to randomize the beginning metrics because I figured it was more challenging (and interesting) than beginning from zero. This gives the player more incentive to interact with the pet if the starting metrics are closer to the "end game" metric of 10.
 
-I also chose to randomize which metric was elevated every 8 seconds to keep the user "on their toes" and not knowing which metric would increase. *A sample of these randomizations may be seen below:*
+I also chose to randomize which metric was elevated every 8 seconds to keep the user "on their toes" and not knowing which metric would increase. I chose the time interval of 8 so that it would not frequently overlap with the other alerts I have set (birthday, etc). *A sample of these randomizations may be seen below:*
 
 //Randomizes starting hunger, sleepiness, and boredom values
 let randomHunger = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
