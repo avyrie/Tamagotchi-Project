@@ -47,23 +47,23 @@ I chose to randomize the beginning metrics because I figured it was more challen
 
 I also chose to randomize which metric was elevated every 8 seconds to keep the user "on their toes" and not knowing which metric would increase. I chose the time interval of 8 so that it would not frequently overlap with the other alerts I have set (birthday, etc). *A sample of these randomizations may be seen below:*
 
-//Randomizes starting hunger, sleepiness, and boredom values
-let randomHunger = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
+*//Randomizes starting hunger, sleepiness, and boredom values*
+*let randomHunger = Math.floor(Math.random() * (5 - 1 + 1)) + 1;*
 
 &
 
-//Put tamagotchi factors into an array for easy random access
-            let factors = [tamagotchi.hunger, tamagotchi.sleepiness, tamagotchi.boredom ];
-            //every 8 seconds,a prompt will appear and a randomly chosen factor will be increased by 1
-            if (time % 8 === 0) {
+*//Put tamagotchi factors into an array for easy random access*
+            *let factors = [tamagotchi.hunger, tamagotchi.sleepiness, tamagotchi.boredom ];*
+            *//every 8 seconds,a prompt will appear and a randomly chosen factor will be increased by 1*
+            *if (time % 8 === 0) {*
 
-                let randomFactor = factors[Math.floor(Math.random() * 3)];
+               *let randomFactor = factors[Math.floor(Math.random() * 3)];*
 
-                if (randomFactor === tamagotchi.hunger) {
+                *if (randomFactor === tamagotchi.hunger) {*
 
-                        tamagotchi.hunger = tamagotchi.hunger + 1;
-                        console.log(`${tamagotchi.name}'s hunger level is ${tamagotchi.hunger}`);
-                        hungerCount.textContent = tamagotchi.hunger;
+                        *tamagotchi.hunger = tamagotchi.hunger + 1;*
+                        *console.log(`${tamagotchi.name}'s hunger level is ${tamagotchi.hunger}`);*
+                        *hungerCount.textContent = tamagotchi.hunger;*
 
 **Approach**
 
