@@ -53,8 +53,11 @@ I also chose to randomize which metric was elevated every 8 seconds to keep the 
 &
 
 *//Put tamagotchi factors into an array for easy random access*
+
 *let factors = [tamagotchi.hunger, tamagotchi.sleepiness, tamagotchi.boredom ];*
+
 *//every 8 seconds,a prompt will appear and a randomly chosen factor will be increased by 1*
+
 *if (time % 8 === 0) {*
 
     *let randomFactor = factors[Math.floor(Math.random() * 3)];*
@@ -87,3 +90,8 @@ Although I am proud of the product I have completed, I would have liked to inclu
 4. A fully customized character instead of publicly available images that would change facial expressions or actions in response to interaction or metric level.
 5. Thin borders around each section of the "tamagotchi device" to give more screen separation.
 6. When the pet dies, to have the ghost-form of the pet animate up and out of sight in the screen followed by the background being replaced by a video.
+
+**Wire Frame**
+<img src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/assets/20200626_094836.jpg"/>
+
+<img src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/assets/20200626_094851 copy.jpg"/>
