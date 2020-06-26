@@ -81,6 +81,7 @@ function assignBoredom () {
 const feedButton = document.getElementById('feed');
 function handleFeedPet () {
     tamagotchi.hunger = tamagotchi.hunger - 1;
+    console.log(`Mmmmmmm, that was yummy!`)
     console.log(`${tamagotchi.name}'s hunger level is ${tamagotchi.hunger}`);
     hungerCount.textContent = tamagotchi.hunger
 }
@@ -91,6 +92,7 @@ feedButton.addEventListener('click', handleFeedPet);
 const sleepyButton = document.getElementById('sleep');
 function handleSleepyPet () {
     tamagotchi.sleepiness = tamagotchi.sleepiness - 1;
+    console.log(`Zzzzzzzzzzzzz...`);
     console.log(`${tamagotchi.name}'s sleepiness level is ${tamagotchi.sleepiness}`);
     sleepyCount.textContent = tamagotchi.sleepiness;
 }
@@ -101,6 +103,7 @@ sleepyButton.addEventListener('click', handleSleepyPet);
 const boredomButton = document.getElementById('play');
 function handleBoredPet () {
     tamagotchi.boredom = tamagotchi.boredom - 1;
+    console.log(`Wowza, that was so much fun!!!`);
     console.log(`${tamagotchi.name}'s boredom level is ${tamagotchi.boredom}`);
     boredomCount.textContent = tamagotchi.boredom;
     startCharacter.setAttribute(`id`, `bounce-house`);
@@ -180,7 +183,7 @@ function startTimer() {
              //increases age every 30 seconds
              if (time % 20 === 0) {
                 tamagotchi.age++;
-                console.log(`Happy birthday, ${tamagotchi.name}! You're ${tamagotchi.age} years old!`);
+                alert(`Happy birthday, ${tamagotchi.name}! You're ${tamagotchi.age} years old!`);
                 ageCount.textContent = tamagotchi.age;
             }
 
