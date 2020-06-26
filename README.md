@@ -41,9 +41,10 @@ I chose the "life stages" images because they were 1. transparent images and 2. 
 
 I chose to randomize the beginning metrics because I figured it was more challenging (and interesting) than beginning from zero. This gives the player more incentive to interact with the pet if the starting metrics are closer to the "end game" metric of 10.
 
-I also chose to randomize which metric was elevated every 8 seconds to keep the user "on their toes" and not knowing which metric would increase. A sample of this randomization may be seen below:
+I also chose to randomize which metric was elevated every 8 seconds to keep the user "on their toes" and not knowing which metric would increase. *A sample of these randomizations may be seen below:*
 
-![Code Example](/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/assets/Screen Shot 2020-06-25 at 10.54.19 PM copy.png)
+//Randomizes starting hunger, sleepiness, and boredom values
+let randomHunger = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
 
 &
 
@@ -60,3 +61,22 @@ I also chose to randomize which metric was elevated every 8 seconds to keep the 
                         console.log(`${tamagotchi.name}'s hunger level is ${tamagotchi.hunger}`);
                         hungerCount.textContent = tamagotchi.hunger;
 
+**Approach**
+
+I decided to begin the construction of this game with the Javascript, choosing to focus first on functionality before tackling aesthetic. This served me well as I was able to complete most of the functionality the first day and focus on mostly the aesthetic look of the device and characters in the subsequent days. I am not as familiar with CSS as I am JS and wanted to make sure my game worked to my satisfaction first so that I would have time to familiarize myself with various CSS properties I was shakier on.
+
+**Difficulties**
+
+Getting the CSS to where I was satisfied with the appearance of the game was definitely my biggest challenge. Even something as simple as centering all my elements in their respective sections took hours of my time.
+
+**Wishful Thinking**
+
+Although I am proud of the product I have completed, I would have liked to include a few more aspects.
+
+1. A slow fade-out of the life-stages instead of just a fade in of the next life-stage.
+2. More animation, especially when it comes to the interactive metric buttons.
+3. Idle animation for the digital pet.
+4. A selection of items to feed to the digital pet that would decrease the hunger level by a value of 1-3 depending on what was being fed.
+5. A fully customized character instead of publicly available images that would change facial expressions or actions in response to interaction or metric level.
+6. Thin borders around each section of the "tamagotchi device" to give more screen separation.
+7. When the pet dies, to have the ghost-form of the pet animate up and out of sight in the screen followed by the background being replaced by a video.

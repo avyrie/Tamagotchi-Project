@@ -67,6 +67,8 @@ button {
     margin: auto 10px;
 }
 
+
+/* https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
 @keyframes shake {
     10%, 90% {
       transform: translate3d(-1px, 0, 0);
@@ -118,6 +120,7 @@ button {
     animation-iteration-count: infinite;
 }
 
+/* https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
 #shaking-character:hover {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);

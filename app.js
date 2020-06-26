@@ -138,12 +138,15 @@ function startTimer() {
             let secondCharacter;
             let thirdCharacter;
             const timer = setInterval(function () {    
-            if (time < 300) {
+            if (time < 25) {
                 time++;
                 console.log(time);
             } else {
                 alert('It\'s always sad to say goodbye...');
-                startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/ghost-drawing-2.png";
+                //https://uploads.scratch.mit.edu/users/avatars/35525530.png
+                startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
+                secondCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
+                thirdCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
                 clearInterval(timer);
                 endVideo = document.getElementById(`hide`);
                 endVideo.removeAttribute(`id`);
@@ -189,9 +192,10 @@ function startTimer() {
 
             //if one of the metrics goes above 10, pet will die
             if (tamagotchi.hunger >= 10 || tamagotchi.boredom >= 10 || tamagotchi.sleepiness >= 10) {
-                startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/ghost-drawing-2.png";
-                secondCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/ghost-drawing-2.png";
-                thirdCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/ghost-drawing-2.png";
+                //https://uploads.scratch.mit.edu/users/avatars/35525530.png
+                startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
+                secondCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
+                thirdCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
                 clearInterval(timer);
                 alert(`You have let down your precious friend. They have died from neglect.`)
                 endVideo = document.getElementById(`hide`);
@@ -202,25 +206,25 @@ function startTimer() {
 
     // When the tamagotchi gets to  100 and 200 seconds, the lifestage and image will change
     
-            //First evolution
-            if (time == 100) {
+            //First evolution https://thumbs.gfycat.com/ValidLiveAmericangoldfinch-small.gif
+            if (time == 10) {
                 function secondStage() {
                 startCharacter.remove();
                 secondCharacter = document.createElement(`img`);
                 secondCharacter.setAttribute(`class`, `character-two`);
-                secondCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/littler-cat.png";
+                secondCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/blackcatgif.gif";
                 document.querySelector(`.nest`).appendChild(secondCharacter);
                 }
                 secondStage();
             }
 
-            //Second evolution
-            if (time === 200) {
+            //Second evolution https://www.petbarn.com.au/skin/frontend/enterprise/petbarn/images/dropdowns/dropdown_cat.gif
+            if (time === 20) {
                 function thirdStage() {
                 secondCharacter.remove();
                 thirdCharacter = document.createElement(`img`);
                 thirdCharacter.setAttribute(`class`, `character-three`);
-                thirdCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/black cat evil looking.png";
+                thirdCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/dropdown_cat.gif";
                 document.querySelector(`.nest`).appendChild(thirdCharacter);
                 }
                 thirdStage();
@@ -235,9 +239,10 @@ function startTimer() {
 
     const startCharacter = document.getElementById('shaking-character');
 
+    //https://lh3.googleusercontent.com/proxy/FtxFtFCL8jp9a_q_Bj4kR03EjUVhUOubLFEcyScgTmXiAYxjHJPTWut61NNMxv3Mk1ruAYUGaWwTMD_RQJDq1AV1zMvTNrk
     function firstStage() {
         startCharacter.setAttribute(`id`, `character`);
-        startCharacter.src = "/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/black-blob-first.png";
+        startCharacter.src = "/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/blackkittyblob.gif";
     }
 
     startButton.addEventListener('click', firstStage);
