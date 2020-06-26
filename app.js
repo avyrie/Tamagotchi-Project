@@ -130,23 +130,27 @@ startButton.addEventListener('click', hideName);
 
 //Starts timer. Game lasts for 20 minutes (1200 seconds)
 let time = 0;
+let endVideo;
 function startTimer() {
             let secondCharacter;
             let thirdCharacter;
             const timer = setInterval(function () {    
-            if (time < 900) {
+            if (time < 300) {
                 time++;
                 console.log(time);
             } else {
                 alert('It\'s always sad to say goodbye...');
                 startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/ghost-drawing-2.png";
                 clearInterval(timer);
+                endVideo = document.getElementById(`hide`);
+                endVideo.removeAttribute(`id`);
+                endVideo.setAttribute(`id`, `video`);
             }
             
             //Put tamagotchi factors into an array for easy random access
             let factors = [tamagotchi.hunger, tamagotchi.sleepiness, tamagotchi.boredom ];
             //every 5 seconds,a prompt will appear and a ranomly chosen factor will be increased by 1
-            if (time % 5 === 0) {
+            if (time % 8 === 0) {
 
                 let randomFactor = factors[Math.floor(Math.random() * 3)];
 
@@ -174,7 +178,7 @@ function startTimer() {
             }   
 
              //increases age every 30 seconds
-             if (time % 30 === 0) {
+             if (time % 20 === 0) {
                 tamagotchi.age++;
                 console.log(`Happy birthday, ${tamagotchi.name}! You're ${tamagotchi.age} years old!`);
                 ageCount.textContent = tamagotchi.age;
@@ -183,15 +187,20 @@ function startTimer() {
             //if one of the metrics goes above 10, pet will die
             if (tamagotchi.hunger >= 10 || tamagotchi.boredom >= 10 || tamagotchi.sleepiness >= 10) {
                 startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/ghost-drawing-2.png";
-                alert(`You have let down your precious friend. They have died from neglect.`)
+                secondCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/ghost-drawing-2.png";
+                thirdCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/ghost-drawing-2.png";
                 clearInterval(timer);
+                alert(`You have let down your precious friend. They have died from neglect.`)
+                endVideo = document.getElementById(`hide`);
+                endVideo.removeAttribute(`id`);
+                endVideo.setAttribute(`id`, `video`);
             }
 
 
     // When the tamagotchi gets to 5, 10, and 15 minutes the lifestage and image will change
     
-            //300 s
-            if (time == 14) {
+            //First evolution
+            if (time == 100) {
                 function secondStage() {
                 startCharacter.remove();
                 secondCharacter = document.createElement(`img`);
@@ -202,8 +211,8 @@ function startTimer() {
                 secondStage();
             }
 
-            //600 s
-            if (time === 18) {
+            //Second evolution
+            if (time === 200) {
                 function thirdStage() {
                 secondCharacter.remove();
                 thirdCharacter = document.createElement(`img`);
@@ -219,7 +228,7 @@ function startTimer() {
 
     //---------------------------------------------------------
 
-    // When game begins the character image changes tot he starting image
+    // When game begins the character image changes to the starting image
 
     const startCharacter = document.getElementById('shaking-character');
 
