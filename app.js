@@ -139,15 +139,15 @@ function startTimer() {
     let thirdCharacter;
     const timer = setInterval(function () {    
             
-        if (time < 180) {
+        if (time < 183) {
             time++;
             console.log(time);
         } else {
             alert('It\'s always sad to say goodbye...');
             //https://uploads.scratch.mit.edu/users/avatars/35525530.png
-            startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
-            secondCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
-            thirdCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
+            startCharacter.src="./images/catghost.png";
+            secondCharacter.src="./images/catghost.png";
+            thirdCharacter.src="./images/catghost.png";
             clearInterval(timer);
             endVideo = document.getElementById(`hide`);
             endVideo.removeAttribute(`id`);
