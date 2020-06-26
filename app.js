@@ -139,7 +139,7 @@ function startTimer() {
     let thirdCharacter;
     const timer = setInterval(function () {    
             
-        if (time < 300) {
+        if (time < 180) {
             time++;
             console.log(time);
         } else {
@@ -158,7 +158,7 @@ function startTimer() {
         let factors = [tamagotchi.hunger, tamagotchi.sleepiness, tamagotchi.boredom ];
 
         //every 8 seconds,a prompt will appear and a randomly chosen factor will be increased by 1
-        if (time % 8 === 0) {
+        if (time % 6 === 0) {
 
             let randomFactor = factors[Math.floor(Math.random() * 3)];
 
@@ -183,7 +183,7 @@ function startTimer() {
         }   
 
         //increases age every 20 seconds
-        if (time % 20 === 0) {
+        if (time % 15 === 0) {
             tamagotchi.age++;
             alert(`Happy birthday, ${tamagotchi.name}! You're ${tamagotchi.age} years old!`);
             ageCount.textContent = tamagotchi.age;
@@ -206,7 +206,7 @@ function startTimer() {
         // When the tamagotchi gets to  100 and 200 seconds, the lifestage and image will change
         
         //First evolution https://thumbs.gfycat.com/ValidLiveAmericangoldfinch-small.gif
-        if (time == 100) {
+        if (time == 60) {
             function secondStage() {
                 startCharacter.remove();
                 secondCharacter = document.createElement(`img`);
@@ -218,7 +218,7 @@ function startTimer() {
         }
 
         //Second evolution https://www.petbarn.com.au/skin/frontend/enterprise/petbarn/images/dropdowns/dropdown_cat.gif
-        if (time === 200) {
+        if (time === 120) {
             function thirdStage() {
                 secondCharacter.remove();
                 thirdCharacter = document.createElement(`img`);
