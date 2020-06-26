@@ -135,114 +135,113 @@ startButton.addEventListener('click', hideName);
 let time = 0;
 let endVideo;
 function startTimer() {
-            let secondCharacter;
-            let thirdCharacter;
-            const timer = setInterval(function () {    
-            if (time < 300) {
-                time++;
-                console.log(time);
-            } else {
-                alert('It\'s always sad to say goodbye...');
-                //https://uploads.scratch.mit.edu/users/avatars/35525530.png
-                startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
-                secondCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
-                thirdCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
-                clearInterval(timer);
-                endVideo = document.getElementById(`hide`);
-                endVideo.removeAttribute(`id`);
-                endVideo.setAttribute(`id`, `video`);
-            }
+    let secondCharacter;
+    let thirdCharacter;
+    const timer = setInterval(function () {    
             
-            //Put tamagotchi factors into an array for easy random access
-            let factors = [tamagotchi.hunger, tamagotchi.sleepiness, tamagotchi.boredom ];
-            //every 8 seconds,a prompt will appear and a randomly chosen factor will be increased by 1
-            if (time % 8 === 0) {
+        if (time < 300) {
+            time++;
+            console.log(time);
+        } else {
+            alert('It\'s always sad to say goodbye...');
+            //https://uploads.scratch.mit.edu/users/avatars/35525530.png
+            startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
+            secondCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
+            thirdCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
+            clearInterval(timer);
+            endVideo = document.getElementById(`hide`);
+            endVideo.removeAttribute(`id`);
+            endVideo.setAttribute(`id`, `video`);
+        }
+            
+        //Put tamagotchi factors into an array for easy random access
+        let factors = [tamagotchi.hunger, tamagotchi.sleepiness, tamagotchi.boredom ];
 
-                let randomFactor = factors[Math.floor(Math.random() * 3)];
+        //every 8 seconds,a prompt will appear and a randomly chosen factor will be increased by 1
+        if (time % 8 === 0) {
 
-                if (randomFactor === tamagotchi.hunger) {
+            let randomFactor = factors[Math.floor(Math.random() * 3)];
 
-                        tamagotchi.hunger = tamagotchi.hunger + 1;
-                        console.log(`${tamagotchi.name}'s hunger level is ${tamagotchi.hunger}`);
-                        hungerCount.textContent = tamagotchi.hunger;
+            if (randomFactor === tamagotchi.hunger) {
+                tamagotchi.hunger = tamagotchi.hunger + 1;
+                console.log(`${tamagotchi.name}'s hunger level is ${tamagotchi.hunger}`);
+                hungerCount.textContent = tamagotchi.hunger;
 
-                } else if (randomFactor === tamagotchi.sleepiness) {
+            } else if (randomFactor === tamagotchi.sleepiness) {
+                tamagotchi.sleepiness = tamagotchi.sleepiness + 1;
+                console.log(`${tamagotchi.name}'s sleepiness level is ${tamagotchi.sleepiness}`);
+                sleepyCount.textContent = tamagotchi.sleepiness;
 
-                    tamagotchi.sleepiness = tamagotchi.sleepiness + 1;
-                        console.log(`${tamagotchi.name}'s sleepiness level is ${tamagotchi.sleepiness}`);
-                        sleepyCount.textContent = tamagotchi.sleepiness;
-
-                } else if (randomFactor === tamagotchi.boredom) {
-
-                    tamagotchi.boredom = tamagotchi.boredom + 1;
-                        console.log(`${tamagotchi.name}'s boredom level is ${tamagotchi.boredom}`);
-                        boredomCount.textContent = tamagotchi.boredom;
-                }
-                //---------------------------------------------------------
+            } else if (randomFactor === tamagotchi.boredom) {
+                tamagotchi.boredom = tamagotchi.boredom + 1;
+                console.log(`${tamagotchi.name}'s boredom level is ${tamagotchi.boredom}`);
+                boredomCount.textContent = tamagotchi.boredom;
+            }
+//---------------------------------------------------------
                 
-                window.alert(`${tamagotchi.name} needs some attention`);
-            }   
+        window.alert(`${tamagotchi.name} needs some attention`);
+        }   
 
-             //increases age every 20 seconds
-             if (time % 20 === 0) {
-                tamagotchi.age++;
-                alert(`Happy birthday, ${tamagotchi.name}! You're ${tamagotchi.age} years old!`);
-                ageCount.textContent = tamagotchi.age;
-            }
+        //increases age every 20 seconds
+        if (time % 20 === 0) {
+            tamagotchi.age++;
+            alert(`Happy birthday, ${tamagotchi.name}! You're ${tamagotchi.age} years old!`);
+            ageCount.textContent = tamagotchi.age;
+        }
 
-            //if one of the metrics goes above 10, pet will die
-            if (tamagotchi.hunger >= 10 || tamagotchi.boredom >= 10 || tamagotchi.sleepiness >= 10) {
-                //https://uploads.scratch.mit.edu/users/avatars/35525530.png
-                startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
-                secondCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
-                thirdCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
-                clearInterval(timer);
-                alert(`You have let down your precious friend. They have died from neglect.`)
-                endVideo = document.getElementById(`hide`);
-                endVideo.removeAttribute(`id`);
-                endVideo.setAttribute(`id`, `video`);
-            }
+        //if one of the metrics goes above 10, pet will die
+        if (tamagotchi.hunger >= 10 || tamagotchi.boredom >= 10 || tamagotchi.sleepiness >= 10) {
+            //https://uploads.scratch.mit.edu/users/avatars/35525530.png
+            startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
+            secondCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
+            thirdCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
+            clearInterval(timer);
+            alert(`You have let down your precious friend. They have died from neglect.`)
+            endVideo = document.getElementById(`hide`);
+            endVideo.removeAttribute(`id`);
+            endVideo.setAttribute(`id`, `video`);
+        }
 
 
-    // When the tamagotchi gets to  100 and 200 seconds, the lifestage and image will change
-    
-            //First evolution https://thumbs.gfycat.com/ValidLiveAmericangoldfinch-small.gif
-            if (time == 100) {
-                function secondStage() {
+        // When the tamagotchi gets to  100 and 200 seconds, the lifestage and image will change
+        
+        //First evolution https://thumbs.gfycat.com/ValidLiveAmericangoldfinch-small.gif
+        if (time == 100) {
+            function secondStage() {
                 startCharacter.remove();
                 secondCharacter = document.createElement(`img`);
                 secondCharacter.setAttribute(`class`, `character-two`);
                 secondCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/blackcatgif.gif";
                 document.querySelector(`.nest`).appendChild(secondCharacter);
-                }
-                secondStage();
             }
+            secondStage();
+        }
 
-            //Second evolution https://www.petbarn.com.au/skin/frontend/enterprise/petbarn/images/dropdowns/dropdown_cat.gif
-            if (time === 200) {
-                function thirdStage() {
+        //Second evolution https://www.petbarn.com.au/skin/frontend/enterprise/petbarn/images/dropdowns/dropdown_cat.gif
+        if (time === 200) {
+            function thirdStage() {
                 secondCharacter.remove();
                 thirdCharacter = document.createElement(`img`);
                 thirdCharacter.setAttribute(`class`, `character-three`);
                 thirdCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/dropdown_cat.gif";
                 document.querySelector(`.nest`).appendChild(thirdCharacter);
-                }
-                thirdStage();
             }
+            thirdStage();
+        }
 
-        }, 1000) // interval
-    }
+    }, 1000) // interval
+}
 
-    //---------------------------------------------------------
+//---------------------------------------------------------
 
-    // When game begins the character image changes to the starting image
+// When game begins the character image changes to the starting image
 
-    const startCharacter = document.getElementById('shaking-character');
+const startCharacter = document.getElementById('shaking-character');
 
-    //https://lh3.googleusercontent.com/proxy/FtxFtFCL8jp9a_q_Bj4kR03EjUVhUOubLFEcyScgTmXiAYxjHJPTWut61NNMxv3Mk1ruAYUGaWwTMD_RQJDq1AV1zMvTNrk
-    function firstStage() {
-        startCharacter.setAttribute(`id`, `character`);
-        startCharacter.src = "/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/blackkittyblob.gif";
-    }
+//https://lh3.googleusercontent.com/proxy/FtxFtFCL8jp9a_q_Bj4kR03EjUVhUOubLFEcyScgTmXiAYxjHJPTWut61NNMxv3Mk1ruAYUGaWwTMD_RQJDq1AV1zMvTNrk
+function firstStage() {
+    startCharacter.setAttribute(`id`, `character`);
+    startCharacter.src = "/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/blackkittyblob.gif";
+}
 
-    startButton.addEventListener('click', firstStage);
+startButton.addEventListener('click', firstStage);

@@ -53,17 +53,17 @@ I also chose to randomize which metric was elevated every 8 seconds to keep the 
 &
 
 *//Put tamagotchi factors into an array for easy random access*
-            *let factors = [tamagotchi.hunger, tamagotchi.sleepiness, tamagotchi.boredom ];*
-            *//every 8 seconds,a prompt will appear and a randomly chosen factor will be increased by 1*
-            *if (time % 8 === 0) {*
+*let factors = [tamagotchi.hunger, tamagotchi.sleepiness, tamagotchi.boredom ];*
+*//every 8 seconds,a prompt will appear and a randomly chosen factor will be increased by 1*
+*if (time % 8 === 0) {*
 
-               *let randomFactor = factors[Math.floor(Math.random() * 3)];*
+    *let randomFactor = factors[Math.floor(Math.random() * 3)];*
 
-                *if (randomFactor === tamagotchi.hunger) {*
+*if (randomFactor === tamagotchi.hunger) {*
 
-                        *tamagotchi.hunger = tamagotchi.hunger + 1;*
-                        *console.log(`${tamagotchi.name}'s hunger level is ${tamagotchi.hunger}`);*
-                        *hungerCount.textContent = tamagotchi.hunger;*
+    *tamagotchi.hunger = tamagotchi.hunger + 1;*
+    *console.log(`${tamagotchi.name}'s hunger level is ${tamagotchi.hunger}`);*
+    *hungerCount.textContent = tamagotchi.hunger;*
 
 **Approach**
 
