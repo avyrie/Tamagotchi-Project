@@ -192,9 +192,9 @@ function startTimer() {
         //if one of the metrics goes above 10, pet will die
         if (tamagotchi.hunger >= 10 || tamagotchi.boredom >= 10 || tamagotchi.sleepiness >= 10) {
             //https://uploads.scratch.mit.edu/users/avatars/35525530.png
-            startCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
-            secondCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
-            thirdCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/catghost.png";
+            startCharacter.src="./images/catghost.png";
+            secondCharacter.src="./images/catghost.png";
+            thirdCharacter.src="./images/catghost.png";
             clearInterval(timer);
             alert(`You have let down your precious friend. They have died from neglect.`)
             endVideo = document.getElementById(`hide`);
@@ -211,7 +211,7 @@ function startTimer() {
                 startCharacter.remove();
                 secondCharacter = document.createElement(`img`);
                 secondCharacter.setAttribute(`class`, `character-two`);
-                secondCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/blackcatgif.gif";
+                secondCharacter.src="./images/blackcatgif.gif";
                 document.querySelector(`.nest`).appendChild(secondCharacter);
             }
             secondStage();
@@ -241,7 +241,7 @@ const startCharacter = document.getElementById('shaking-character');
 //https://lh3.googleusercontent.com/proxy/FtxFtFCL8jp9a_q_Bj4kR03EjUVhUOubLFEcyScgTmXiAYxjHJPTWut61NNMxv3Mk1ruAYUGaWwTMD_RQJDq1AV1zMvTNrk
 function firstStage() {
     startCharacter.setAttribute(`id`, `character`);
-    startCharacter.src = "/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/blackkittyblob.gif";
+    startCharacter.src = "./images/blackkittyblob.gif";
 }
 
 startButton.addEventListener('click', firstStage);
