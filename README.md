@@ -73,6 +73,10 @@ I decided to begin the construction of this game with the Javascript, choosing t
 
 Getting the CSS to where I was satisfied with the appearance of the game was definitely my biggest challenge. Even something as simple as centering all my elements in their respective sections took hours of my time.
 
+Animating the images was also a struggle of mine. I managed to animate the life-stage evolution transitions to fade in when the timer hit a certain number of seconds, but did not end up being able to fade out the previous life-stage image.
+
+I was able to animate the image of the digital pet so that it would bounce when the play button was clicked, but only managed to get it to work once.
+
 **Wishful Thinking**
 
 Although I am proud of the product I have completed, I would have liked to include a few more aspects.
