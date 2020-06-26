@@ -43,4 +43,20 @@ I chose to randomize the beginning metrics because I figured it was more challen
 
 I also chose to randomize which metric was elevated every 8 seconds to keep the user "on their toes" and not knowing which metric would increase. A sample of this randomization may be seen below:
 
-<text src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/assets/Beginning Metric Randomization Example.txt"></text>
+<img src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/assets/Screen Shot 2020-06-25 at 10.54.19 PM copy.png"/>
+
+&
+
+//Put tamagotchi factors into an array for easy random access
+            let factors = [tamagotchi.hunger, tamagotchi.sleepiness, tamagotchi.boredom ];
+            //every 8 seconds,a prompt will appear and a randomly chosen factor will be increased by 1
+            if (time % 8 === 0) {
+
+                let randomFactor = factors[Math.floor(Math.random() * 3)];
+
+                if (randomFactor === tamagotchi.hunger) {
+
+                        tamagotchi.hunger = tamagotchi.hunger + 1;
+                        console.log(`${tamagotchi.name}'s hunger level is ${tamagotchi.hunger}`);
+                        hungerCount.textContent = tamagotchi.hunger;
+
