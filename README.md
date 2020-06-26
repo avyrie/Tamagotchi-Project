@@ -92,6 +92,6 @@ Although I am proud of the product I have completed, I would have liked to inclu
 6. When the pet dies, to have the ghost-form of the pet animate up and out of sight in the screen followed by the background being replaced by a video.
 
 **Wire Frame**
-<img src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/assets/20200626_094836.jpg"/>
+<img src="./assets/20200626_094836.jpg"/>
 
-<img src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/assets/20200626_094851 copy.jpg"/>
+<img src="./assets/20200626_094851.jpg"/>

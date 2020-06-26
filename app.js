@@ -223,7 +223,7 @@ function startTimer() {
                 secondCharacter.remove();
                 thirdCharacter = document.createElement(`img`);
                 thirdCharacter.setAttribute(`class`, `character-three`);
-                thirdCharacter.src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/dropdown_cat.gif";
+                thirdCharacter.src="./images/dropdown_cat.gif";
                 document.querySelector(`.nest`).appendChild(thirdCharacter);
             }
             thirdStage();
