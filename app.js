@@ -24,17 +24,21 @@ let tamagotchi = new DigitalPet(name, randomHunger, randomSleepiness, randomBore
 const chooseNameButton = document.getElementById('name-your-friend');
 
 function handleChooseName() {
-
     const newName = document.querySelector('input').value;
-    tamagotchi.name = newName;
-    
-    console.log(`Your new friend's name is ${tamagotchi.name} :) `);
-    console.log(tamagotchi);
+    const errorMsg = document.querySelector('.er')
+    if (newName !== '') {
+        tamagotchi.name = newName;
+        console.log(`Your new friend's name is ${tamagotchi.name} :) `);
+        console.log(tamagotchi);
+        errorMsg.removeAttribute('id')
+    } else {
+        errorMsg.setAttribute('id', 'error')
+    }
 }
 
 chooseNameButton.addEventListener('click', handleChooseName);
 
-//Clears form after input
+// Clears form after input
 function clearForm () {
     document.getElementById('name-input').value = "";
 }
@@ -75,15 +79,17 @@ function assignBoredom () {
 
 //-----------------------------------------------------------------
 
-//interactive buttons
+//Interactive buttons
 
 //If you click the "Feed!" button, the hunger level is decreased by 1
 const feedButton = document.getElementById('feed');
 function handleFeedPet () {
-    tamagotchi.hunger = tamagotchi.hunger - 1;
-    console.log(`Mmmmmmm, that was yummy!`)
-    console.log(`${tamagotchi.name}'s hunger level is ${tamagotchi.hunger}`);
-    hungerCount.textContent = tamagotchi.hunger
+    if (tamagotchi.hunger > 0 && tamagotchi.boredom < 10 && tamagotchi.sleepiness < 10 && tamagotchi.hunger < 10) {
+        tamagotchi.hunger = tamagotchi.hunger - 1;
+        console.log(`Mmmmmmm, that was yummy!`)
+        console.log(`${tamagotchi.name}'s hunger level is ${tamagotchi.hunger}`);
+        hungerCount.textContent = tamagotchi.hunger
+    }
 }
 
 feedButton.addEventListener('click', handleFeedPet);
@@ -91,10 +97,12 @@ feedButton.addEventListener('click', handleFeedPet);
 //If you click the "Time For Bed" button, the sleepiness level is decreased by 1
 const sleepyButton = document.getElementById('sleep');
 function handleSleepyPet () {
-    tamagotchi.sleepiness = tamagotchi.sleepiness - 1;
-    console.log(`Zzzzzzzzzzzzz...`);
-    console.log(`${tamagotchi.name}'s sleepiness level is ${tamagotchi.sleepiness}`);
-    sleepyCount.textContent = tamagotchi.sleepiness;
+    if (tamagotchi.sleepiness > 0 && tamagotchi.boredom < 10 && tamagotchi.sleepiness < 10 && tamagotchi.hunger < 10) {
+        tamagotchi.sleepiness = tamagotchi.sleepiness - 1;
+        console.log(`Zzzzzzzzzzzzz...`);
+        console.log(`${tamagotchi.name}'s sleepiness level is ${tamagotchi.sleepiness}`);
+        sleepyCount.textContent = tamagotchi.sleepiness;
+    }
 }
 
 sleepyButton.addEventListener('click', handleSleepyPet);
@@ -102,12 +110,16 @@ sleepyButton.addEventListener('click', handleSleepyPet);
 //If you click the "Play!" button, the boredom level is decreased by 1
 const boredomButton = document.getElementById('play');
 function handleBoredPet () {
-    tamagotchi.boredom = tamagotchi.boredom - 1;
-    console.log(`Wowza, that was so much fun!!!`);
-    console.log(`${tamagotchi.name}'s boredom level is ${tamagotchi.boredom}`);
-    boredomCount.textContent = tamagotchi.boredom;
-    startCharacter.setAttribute(`id`, `bounce-house`);
+    if (tamagotchi.boredom > 0 && tamagotchi.boredom < 10 && tamagotchi.sleepiness < 10 && tamagotchi.hunger < 10) {
+        tamagotchi.boredom = tamagotchi.boredom - 1;
+        console.log(`Wowza, that was so much fun!!!`);
+        console.log(`${tamagotchi.name}'s boredom level is ${tamagotchi.boredom}`);
+        boredomCount.textContent = tamagotchi.boredom;
+        startCharacter.setAttribute(`id`, `bounce-house`);
+        setTimeout('startCharacter.setAttribute(`id`, `no-bounce`)', 1000)
+    }
 }
+
 
 boredomButton.addEventListener('click', handleBoredPet);
 //--------------------------------------------------------------------
@@ -139,7 +151,7 @@ function startTimer() {
     let thirdCharacter;
     const timer = setInterval(function () {    
             
-        if (time < 183) {
+        if (time < 180) {
             time++;
             console.log(time);
         } else {
@@ -157,39 +169,41 @@ function startTimer() {
         //Put tamagotchi factors into an array for easy random access
         let factors = [tamagotchi.hunger, tamagotchi.sleepiness, tamagotchi.boredom ];
 
-        //every 8 seconds,a prompt will appear and a randomly chosen factor will be increased by 1
-        if (time % 6 === 0) {
+        //every 6 seconds,a prompt will appear and a randomly chosen factor will be increased by 1
+        let randomFactor;
+        if (time % 6 === 0 && tamagotchi.boredom < 10 && tamagotchi.sleepiness < 10 && tamagotchi.hunger < 10) {
+            randomFactor = factors[Math.floor(Math.random() * 3)];
 
-            let randomFactor = factors[Math.floor(Math.random() * 3)];
-
-            if (randomFactor === tamagotchi.hunger) {
+            if (randomFactor === tamagotchi.hunger && tamagotchi.hunger < 10) {
                 tamagotchi.hunger = tamagotchi.hunger + 1;
                 console.log(`${tamagotchi.name}'s hunger level is ${tamagotchi.hunger}`);
                 hungerCount.textContent = tamagotchi.hunger;
 
-            } else if (randomFactor === tamagotchi.sleepiness) {
+            } else if (randomFactor === tamagotchi.sleepiness && tamagotchi.sleepiness < 10) {
                 tamagotchi.sleepiness = tamagotchi.sleepiness + 1;
                 console.log(`${tamagotchi.name}'s sleepiness level is ${tamagotchi.sleepiness}`);
                 sleepyCount.textContent = tamagotchi.sleepiness;
 
-            } else if (randomFactor === tamagotchi.boredom) {
+            } else if (randomFactor === tamagotchi.boredom && tamagotchi.boredom < 10) {
                 tamagotchi.boredom = tamagotchi.boredom + 1;
                 console.log(`${tamagotchi.name}'s boredom level is ${tamagotchi.boredom}`);
                 boredomCount.textContent = tamagotchi.boredom;
             }
-//---------------------------------------------------------
-                
-        window.alert(`${tamagotchi.name} needs some attention`);
+            if (tamagotchi.boredom < 10 && tamagotchi.sleepiness < 10 && tamagotchi.hunger < 10){
+                window.alert(`${tamagotchi.name} needs some attention`);
+            }
         }   
 
-        //increases age every 20 seconds
-        if (time % 15 === 0) {
+    //---------------------------------------------------------
+
+        //Increases age every 15 seconds
+        if (time % 15 === 0 && tamagotchi.boredom < 10 && tamagotchi.sleepiness < 10 && tamagotchi.hunger < 10) {
             tamagotchi.age++;
             alert(`Happy birthday, ${tamagotchi.name}! You're ${tamagotchi.age} years old!`);
             ageCount.textContent = tamagotchi.age;
         }
 
-        //if one of the metrics goes above 10, pet will die
+        //If one of the metrics goes above 10, pet will die
         if (tamagotchi.hunger >= 10 || tamagotchi.boredom >= 10 || tamagotchi.sleepiness >= 10) {
             //https://uploads.scratch.mit.edu/users/avatars/35525530.png
             startCharacter.src="./images/catghost.png";
@@ -198,7 +212,7 @@ function startTimer() {
             clearInterval(timer);
             alert(`You have let down your precious friend. They have died from neglect.`)
             endVideo = document.getElementById(`hide`);
-            endVideo.removeAttribute(`id`);
+            // endVideo.removeAttribute(`id`);
             endVideo.setAttribute(`id`, `video`);
         }
 

@@ -62,29 +62,36 @@ h1 {
     margin-left: 2%;
     margin-right: 2%;
 }
-/* Bounce animation when Play button is clicked -only works once- */
+/* Bounce animation when Play button is clicked */
 #bounce-house {
     width: 100%;
     margin: 20px auto;
-    animation: bounce 1s infinite alternate;
+    animation: bounce 1s infinite alternate; 
     -webkit-animation: bounce 1s alternate;
-  }
-  @keyframes bounce {
+}
+@keyframes bounce {
     from {
-      transform: translateY(0px);
+        transform: translateY(0px);
     }
     to {
-      transform: translateY(-15px);
+        transform: translateY(-15px);
     }
-  }
-  @-webkit-keyframes bounce {
+}
+@-webkit-keyframes bounce {
     from {
-      transform: translateY(0px);
+        transform: translateY(0px);
     }
     to {
-      transform: translateY(-15px);
+        transform: translateY(-15px);
     }
-  }
+}
+
+#no-bounce {
+    width: 100%;
+    margin: 20px auto;
+    position: relative;
+    z-index: 3;
+}
 
 
 /* ---Middle block---  */
@@ -247,4 +254,12 @@ footer {
 flex-shrink: 0;
 margin-bottom: 3%;
 margin-left: 2%;
+}
+
+#error {
+    color: red;
+    text-align: center;
+}
+.er {
+    color: pink;
 }
