@@ -1,123 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- jQuery -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- CSS -->
-    <link rel="stylesheet" href="main.css">
-    <!-- JS -->
-    <script defer src="app.js"></script>
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-    <!-- CSS Animation -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
-    <title>Tamagotchi Project</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- jQuery -->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="main.css">
+        <!-- JS -->
+        <script defer src="app.js"></script>
+        <!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+        <!-- CSS Animation -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+        <title>Tamagotchi Project</title>
+    </head>
 
-<body>
+    <body>
 
-    <h1>My Tamagotchi</h1>
+        <h1>My Tamagotchi</h1>
 
-    <!-- The "name your pet" function. Input box and button. -->
-    <div class="name" id="name-strip">
+        <!-- The "name your pet" function. Input box and button. -->
+        <div class="name" id="name-strip">
+            <input id="name-input" type="text">
+            <button id="name-your-friend">Name Your New Friend!</button>
+        </div>
 
-        <input id="name-input" type="text">
-        <button id="name-your-friend">Name Your New Friend!</button>
+        <!-- Outer ring -->
+        <div class="tama-device">
 
-    </div>
+            <!-- Name section -->
+            <h2 class="name-position"> <span id="name">Name:</span> <span id="name-appear"> </span> </h2>
 
-    
+            <!-- Middle ring -->
+            <div class="metrics-section">
 
-    <!-- Outer ring -->
-    <div class="tama-device">
+                <!-- Age -->
+                <div id="age-section">
+                <h4 class="count" id="age">Age: <span id="age-count"> </span> </h4>
+                </div>
 
-        <!-- Name section -->
-        <h2 class="name-position"> <span id="name">Name:</span> <span id="name-appear"> </span> </h2>
+                <!-- Inner ring -->
+                <div class="character-section"> 
+                    <div class="character-design">
+                        <!-- Starting egg -->
+                        <div class="nest"> 
+                            <img id="shaking-character" src="./images/plain-egg.jpg"/>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- Middle ring -->
-        <div class="metrics-section">
-
-
-            <!-- Age -->
-            <div id="age-section">
-            <h4 class="count" id="age">Age: <span id="age-count"> </span> </h4>
-            </div>
-
-            <!-- Inner ring -->
-            <div class="character-section"> 
-
-                <div class="character-design">
-
-                    <!-- Starting egg -->
-
-                    <div class="nest"> 
-
-                    <img id="shaking-character" src="./images/plain-egg.jpg"/>
-
+                <!-- Inner ring end -->
+                
+                <!-- Contains the metrics for hunger, sleepiness, and boredom -->
+                    <div class="metrics-container">
+                        <h4 class="count, met-count" id="hunger">Hunger: <span id="hunger-count"> </span> </h4>
+                        <h4 class="count, met-count" id="sleepy">Sleepiness: <span id="sleepy-count"> </span> </h4>
+                        <h4 class="count, met-count" id="boredom">Boredom: <span id="boredom-count"> </span> </h4>
                     </div>
 
-                   
-                </div>
-                <!-- Other life stages -->
-                <div class="other-characters">
-                    <!-- <img id="character-one" src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/black-blob-first.png"/>
+            </div>
+            <!-- Middle ring end -->
 
-                    <img class="character-two" src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/littler-cat.png"/>
-
-                    <img id="character-three" src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/panther.webp"/>
-
-                    <img id="ghost-character" src="/Users/folder-of-secrets/Desktop/SEI/projects/tamagotchi/ally-tamagotchi/images/ghost-drawing-2.png"/> -->
-
-                </div>
-
-
+            <!-- The buttons for adjusting the metrics -->
+            <div class="function-buttons">
+                <button id="feed">Feed!</button>
+                <button id="sleep">Time For Bed</button>
+                <button id="play">Play!</button>
             </div>
 
-            <!-- Inner ring end -->
-            
-
-            <!-- Contains the metrics for hunger, sleepiness, and boredom -->
-
-            
-                <div class="metrics-container">
-
-                    <h4 class="count" id="hunger">Hunger: <span id="hunger-count"> </span> </h4>
-                    <h4 class="count" id="sleepy">Sleepiness: <span id="sleepy-count"> </span> </h4>
-                    <h4 class="count" id="boredom">Boredom: <span id="boredom-count"> </span> </h4>
-
-                </div>
-
         </div>
-        <!-- Middle ring end -->
+        <!-- Outer ring end -->
 
-        <!-- The buttons for adjusting the metrics -->
-        <div class="function-buttons">
-
-            <button id="feed">Feed!</button>
-            <button id="sleep">Time For Bed</button>
-            <button id="play">Play!</button>
-
+        <!-- Video  -->
+        <div id="hide">
+            <iframe src="https://www.youtube.com/embed/kXF3VYYa5TI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"
         </div>
 
-</div>
+        <!-- Start game button -->
+        <div class="begin-game">
+            <button id="start">Begin Life With Your New Best Friend</button>
+        </div>
+        
+        <footer>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Ally Pittman</footer>
 
-<!-- Outer ring end -->
-
-<div id="hide">
-    <iframe src="https://www.youtube.com/embed/kXF3VYYa5TI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"
-</div>
-
-    <!-- Start game button -->
-    <div class="begin-game">
-
-        <button id="start">Begin Life With Your New Best Friend</button>
-
-    </div>
-    
-</body>
-
-<footer></footer>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Ally Pittman</footer>
+    </body>
 
 </html>

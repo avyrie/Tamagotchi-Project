@@ -1,220 +1,70 @@
+html, body {
+    height: 100%;
+}
+
 body {
     background: pink;
     font-family: 'Indie Flower', sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
 }
 
+/* My Tamagotchi title */
 h1 {
     display: flex;
     justify-content: center;
 }
 
+/* Name your tamagotchi */
 .name {
     display: flex;
     justify-content: center;
+    margin-bottom: 3%;
 }
-
-#name {
-    margin: 10px;
-    padding: 10px;
-    text-decoration: underline;
-}
-
-#name-appear {
-    margin: 10px;
-    padding: 10px;
-}
-
-.name-position {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    height: 60px;
-}
-
-.metrics-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    margin-left: auto;
-    margin-right: auto;
-    padding: auto 10px;
-    width: 70%
-}
-
-#age {
-    display: flex;
-    justify-content: center;
-    margin-top: 0px;
-    margin-bottom: 30px;
-}
-
-#age-section{
-    display: flex;
-    justify-content: center;
-    padding-top: 15px;
-    height: 40px;
-}
-
-#age-count {
-    display: flex;
-    justify-content: center;
-    margin: auto 10px;
-}
-
-button {
-    font-family: 'Indie Flower', sans-serif;
-    font-weight: bold;
-    margin: auto 10px;
+.name button {
+    margin-left: 3%;
 }
 
 
-/* https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
-@keyframes shake {
-    10%, 90% {
-      transform: translate3d(-1px, 0, 0);
-    }
-    20%, 80% {
-      transform: translate3d(2px, 0, 0);
-    }
-    30%, 50%, 70% {
-      transform: translate3d(-4px, 0, 0);
-    }
-    40%, 60% {
-      transform: translate3d(4px, 0, 0);
-    }
-  }
-
-#character {
-    height: 150px;
-    margin: 20px auto;
-    animation: fadeIn ease 3s;
-    -webkit-animation: fadeIn ease 3s;
-    -moz-animation: fadeIn ease 3s;
-    -o-animation: fadeIn ease 3s;
-    -ms-animation: fadeIn ease 3s;
-}
-
-.character-two {
-    height: 150px;
-    margin: 20px auto;
-    animation: fadeIn ease 3s;
-    -webkit-animation: fadeIn ease 3s;
-    -moz-animation: fadeIn ease 3s;
-    -o-animation: fadeIn ease 3s;
-    -ms-animation: fadeIn ease 3s;
-}
-
-.character-three {
-    height: 150px;
-    margin: 20px auto;
-    animation: fadeIn ease 3s;
-    -webkit-animation: fadeIn ease 3s;
-    -moz-animation: fadeIn ease 3s;
-    -o-animation: fadeIn ease 3s;
-    -ms-animation: fadeIn ease 3s;
-}
-
-#shaking-character {
-    height: 150px;
-    margin: 20px auto;
-    animation-iteration-count: infinite;
-}
-
-/* https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
-#shaking-character:hover {
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-}
-
-.nest {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    z-index: 3;
-}
-
-.character-stages {
-    display: none;
-}
-
-.function-buttons {
-    display: inline-block;
-    margin: auto;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    margin: 15px 10px 20px;
-}
-
-.begin-game {
-    margin: auto;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-}
-
-.character-design {
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    width: 50%;
-}
-
-.character-section {
-    border-radius: 30px;
-    background-image: url("https://www.tynker.com/projects/images/e5fbc86a45895c4f3c516f3a914d1d24561a0a21/background-scene---image.png");
-    background-repeat: no-repeat;
-    background-position: 100% 100%;
-    overflow: hidden;
-    width: 300px;
-    margin: 0 auto;
-}
-
-.character-two, .character-three {
-    position: relative;
-    z-index: 3;
-}
-
-#hide {
-   display: none;
-   position: absolute;
-}
-
-#video {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.metrics-section {
-    border-radius: 30px;
-    background: #fffda7;
-    width: 400px;
-    margin: 0 auto;
-}
-
+/*  ---Outer block---  */
 .tama-device {
     background: #b2d8d8;
-    width: 500px;
+    width: 80%;
     margin: 0 auto;
     border-radius: 30px
 }
-
-.other-characters {
-    display: none;
+/* Where pet's name appears  */
+.name-position {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 60px;
 }
-
-
-/* only works once */
+/* Name:  */
+#name {
+    text-decoration: underline;
+}
+/* Where entered name appears  */
+#name-appear {
+    padding-left: 5%;
+}
+/* Feed, Time For Bed, and Play buttons  */
+.function-buttons {
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0px 20px;
+}
+.function-buttons button {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+/* Bounce animation when Play button is clicked -only works once- */
 #bounce-house {
-    height: 150px;
+    width: 100%;
     margin: 20px auto;
     animation: bounce 1s infinite alternate;
     -webkit-animation: bounce 1s alternate;
@@ -235,3 +85,166 @@ button {
       transform: translateY(-15px);
     }
   }
+
+
+/* ---Middle block---  */
+.metrics-section {
+    border-radius: 30px;
+    background: #fffda7;
+    width: 80%;
+    margin: 0 auto;
+}
+/* Where age of pet is displayed  */
+#age-section{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    height: 40px;
+}
+#age {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+/* Where current age is displayed */
+#age-count {
+    display: flex;
+    justify-content: center;
+    margin: auto 10px;
+}
+
+/* Where current metric numbers appear */
+.metrics-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto 10px;
+    width: 70%
+}
+@media only screen and (max-width: 745px) {
+    .met-count {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .metrics-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .met-count {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .met-count span {
+        padding-left: 5%;
+    }
+}
+
+
+/* ---Inner block---  */
+.character-section {
+    border-radius: 30px;
+    background-image: url("./images/2040.jpg");
+    background-repeat: no-repeat;
+    /* background-position: 100% 100%; */
+    background-size: 150%;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+}
+.character-design {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 50%;
+}
+/* Starting egg  */
+.nest {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+}
+/* Egg shake animation  */
+/* https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+/* Egg image  */
+#shaking-character {
+    width: 90%;
+    margin: 20px auto;
+    animation-iteration-count: infinite;
+}
+/* Animation upon hover  */
+/* https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
+#shaking-character:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+/* Different lifecycles of pet  */
+#character, .character-two, .character-three {
+    width: 100%;
+    margin: 20px auto;
+    position: relative;
+    z-index: 3;
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+}
+
+/* Begin Life With Your New Best Friend button  */
+.begin-game {
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Video that plays at end  */
+#hide {
+   display: none;
+   position: absolute;
+}
+#video {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-family: 'Indie Flower', sans-serif;
+    font-weight: bold;
+}
+
+footer {
+flex-shrink: 0;
+margin-bottom: 3%;
+margin-left: 2%;
+}
