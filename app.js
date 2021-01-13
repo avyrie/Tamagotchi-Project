@@ -40,38 +40,69 @@ chooseNameButton.addEventListener('click', handleChooseName);
 
 // Clears form after input
 function clearForm () {
-    document.getElementById('name-input').value = "";
+    if (tamagotchi.name !== undefined) {
+        document.getElementById('name-input').style.visibility = 'hidden';
+        chooseNameButton.style.visibility = 'hidden';
+    }
 }
 chooseNameButton.addEventListener('click', clearForm);
 
 //---------------------------------------------------------------
 
 //When the name is assigned via button click, the starting age, hunger, sleepiness, and boredom values will be displayed along with your chosen name
+const startButton = document.getElementById('start');
+startButton.disabled = true;
+const feedButton = document.getElementById('feed');
+feedButton.style.visibility = 'hidden';
+
+const sleepyButton = document.getElementById('sleep');
+sleepyButton.style.visibility = 'hidden';
+
+const boredomButton = document.getElementById('play');
+// boredomButton.disabled = true;
+boredomButton.style.visibility = 'hidden';
+
+
 chooseNameButton.addEventListener('click', displayName)
 let nameAppear = document.getElementById('name-appear');
 function displayName () {
     nameAppear.textContent = tamagotchi.name;
+    console.log(tamagotchi.name)
+    if (tamagotchi.name !== undefined) {
+        startButton.disabled = false;
+    } else if (tamagotchi.name === undefined) {
+        startButton.disabled = true;
+    }
 }
 
-chooseNameButton.addEventListener('click', assignAge)
+// Makes metric buttons visible only after game has started 
+function enableButtons() {
+    feedButton.style.visibility = 'visible'
+    boredomButton.style.visibility = 'visible'
+    sleepyButton.style.visibility = 'visible'
+}
+startButton.addEventListener('click', enableButtons)
+
+
+startButton.addEventListener('click', assignAge)
 let ageCount = document.getElementById('age-count');
 function assignAge () {
     ageCount.textContent = tamagotchi.age;
 }
 
-chooseNameButton.addEventListener('click', assignHunger)
+startButton.addEventListener('click', assignHunger)
 let hungerCount = document.getElementById('hunger-count');
 function assignHunger () {
     hungerCount.textContent = tamagotchi.hunger;
 }
 
-chooseNameButton.addEventListener('click', assignSleepy)
+startButton.addEventListener('click', assignSleepy)
 let sleepyCount = document.getElementById('sleepy-count');
 function assignSleepy () {
     sleepyCount.textContent = tamagotchi.sleepiness;
 }
 
-chooseNameButton.addEventListener('click', assignBoredom)
+startButton.addEventListener('click', assignBoredom)
 let boredomCount = document.getElementById('boredom-count');
 function assignBoredom () {
     boredomCount.textContent = tamagotchi.boredom;
@@ -82,7 +113,6 @@ function assignBoredom () {
 //Interactive buttons
 
 //If you click the "Feed!" button, the hunger level is decreased by 1
-const feedButton = document.getElementById('feed');
 function handleFeedPet () {
     if (tamagotchi.hunger > 0 && tamagotchi.boredom < 10 && tamagotchi.sleepiness < 10 && tamagotchi.hunger < 10) {
         tamagotchi.hunger = tamagotchi.hunger - 1;
@@ -95,7 +125,6 @@ function handleFeedPet () {
 feedButton.addEventListener('click', handleFeedPet);
 
 //If you click the "Time For Bed" button, the sleepiness level is decreased by 1
-const sleepyButton = document.getElementById('sleep');
 function handleSleepyPet () {
     if (tamagotchi.sleepiness > 0 && tamagotchi.boredom < 10 && tamagotchi.sleepiness < 10 && tamagotchi.hunger < 10) {
         tamagotchi.sleepiness = tamagotchi.sleepiness - 1;
@@ -108,7 +137,6 @@ function handleSleepyPet () {
 sleepyButton.addEventListener('click', handleSleepyPet);
 
 //If you click the "Play!" button, the boredom level is decreased by 1
-const boredomButton = document.getElementById('play');
 function handleBoredPet () {
     if (tamagotchi.boredom > 0 && tamagotchi.boredom < 10 && tamagotchi.sleepiness < 10 && tamagotchi.hunger < 10) {
         tamagotchi.boredom = tamagotchi.boredom - 1;
@@ -120,12 +148,10 @@ function handleBoredPet () {
     }
 }
 
-
 boredomButton.addEventListener('click', handleBoredPet);
 //--------------------------------------------------------------------
 
 //Click button to start timer
-const startButton = document.getElementById('start');
 startButton.addEventListener('click', startTimer);
 
 //Hides start button after click
@@ -189,9 +215,9 @@ function startTimer() {
                 console.log(`${tamagotchi.name}'s boredom level is ${tamagotchi.boredom}`);
                 boredomCount.textContent = tamagotchi.boredom;
             }
-            if (tamagotchi.boredom < 10 && tamagotchi.sleepiness < 10 && tamagotchi.hunger < 10){
-                window.alert(`${tamagotchi.name} needs some attention`);
-            }
+            // if (tamagotchi.boredom < 10 && tamagotchi.sleepiness < 10 && tamagotchi.hunger < 10){
+            //     window.alert(`${tamagotchi.name} needs some attention`);
+            // }
         }   
 
     //---------------------------------------------------------
