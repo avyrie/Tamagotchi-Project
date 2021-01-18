@@ -1,13 +1,13 @@
-# ally-tamagotchi
+https://avyrie.github.io/Tamagotchi-Project/
 **Week 3 Project: Tamagotchi**
 
 Tamagotchis are digital pets that require care to keep them alive.
 
 **Gameplay:**
 
-On the first screen, enter your preferred name for your new virtual pet. Click the "Name Your New Friend" button to name your new pet! You will see a trio of random starting metrics for your new pet. 
+On the first screen, enter your preferred name for your new virtual pet. Click the "Name Your New Friend" button to name your new pet! 
 
-When you are ready, click the "Begin Life With Your New Best Friend" button to start caring for your new best friend! Make sure to care for your pet and keep the metrics of "Hunger", "Sleepiness", and "Boredom" below 10 to keep your pet happy and healthy!
+When you are ready, click the "Begin Life With Your New Best Friend" button to start caring for your new best friend! You will see a trio of random starting metrics for your new pet. Make sure to care for your pet and keep the metrics of "Hunger", "Sleepiness", and "Boredom" below 10 to keep your pet happy and healthy!
 
 **For my project, I have decided to set up the functionality per the following:**
 
@@ -74,11 +74,11 @@ I decided to begin the construction of this game with the Javascript, choosing t
 
 **Difficulties**
 
-Getting the CSS to where I was satisfied with the appearance of the game was definitely my biggest challenge. Even something as simple as centering all my elements in their respective sections took hours of my time.
+Getting the CSS to where I was satisfied with the appearance of the game was definitely my biggest challenge.
 
 Animating the images was also a struggle of mine. I managed to animate the life-stage evolution transitions to fade in when the timer hit a certain number of seconds, but did not end up being able to fade out the previous life-stage image.
 
-I was able to animate the image of the digital pet so that it would bounce when the play button was clicked, but only managed to get it to work once.
+I was able to animate the image of the digital pet so that it would bounce when the play button was clicked.
 
 **Wishful Thinking**
 
