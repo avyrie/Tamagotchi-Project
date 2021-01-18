@@ -136,6 +136,7 @@ function handleSleepyPet () {
 
 sleepyButton.addEventListener('click', handleSleepyPet);
 
+const images = document.getElementsByTagName('img');
 //If you click the "Play!" button, the boredom level is decreased by 1
 function handleBoredPet () {
     if (tamagotchi.boredom > 0 && tamagotchi.boredom < 10 && tamagotchi.sleepiness < 10 && tamagotchi.hunger < 10) {

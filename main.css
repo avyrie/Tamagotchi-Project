@@ -29,7 +29,7 @@ h1 {
 /*  ---Outer block---  */
 .tama-device {
     background: #b2d8d8;
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
     border-radius: 30px
 }
@@ -224,7 +224,7 @@ h1 {
 
 /* Begin Life With Your New Best Friend button  */
 .begin-game {
-    margin: auto;
+    /* margin: auto; */
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -250,10 +250,10 @@ button {
 }
 
 footer {
-flex-shrink: 0;
-padding-bottom: 10px;
-margin-top: 15px;
-margin-left: 2%;
+    flex-shrink: 0;
+    padding-bottom: 10px;
+    margin-top: 15px;
+    margin-left: 2%;
 }
 
 #error {
@@ -262,5 +262,5 @@ margin-left: 2%;
 }
 .er {
     color: pink;
-    margin: 3px;;
+    margin: 3px;
 }
